@@ -1,0 +1,102 @@
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
+
+button{
+    border-radius: 10px;
+    border: 1px solid rgb(255, 227, 250);
+    background: rgba(245, 230, 242, 0.747);
+    color: rgb(36, 9, 27);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+button:focus{
+    outline: none;
+}
+
+.main{
+    padding-bottom: 90px;
+}
+
+h2{
+    font-weight: lighter;
+}
+
+.main input{
+    background: rgba(240, 235, 239, 0.637);
+    border: 1px solid rgb(233, 233, 233);
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 20%;
+}
+
+.main textarea{
+    background: rgba(240, 235, 239, 0.637);
+    border: 1px solid rgb(233, 233, 233);
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 25%;
+}
+
+.main .ghost #font1{
+    font-family: monospace;
+}
+
+.main .ghost #font2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Icons */
+
+.icon {
+    text-decoration: none;
+    text-decoration: none;
+    font-size: 40px;
+    color: rgb(80, 112, 93);
+}
+
+    .icon:before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none !important;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        color: rgb(29, 29, 29);
+    }
+
+    .icon:before {
+        line-height: inherit;
+    }
+
+
+
+    .icon.solid:before {
+        font-weight: 1900;
+    }
+
+    .icon.brands:before {
+        font-family: 'Font Awesome 5 Brands';
+    }
+
+    .icon:active{
+        transform: scale(0.95);
+    }
+    
+    .icon:focus{
+        outline: none;
+    }
+
+footer{
+    align-content: space-around;
+    padding: 0px 1700px 0;
+}

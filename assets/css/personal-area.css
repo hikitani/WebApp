@@ -1,0 +1,218 @@
+/*  Fonts  */
+@font-face {
+    font-family: 'raleway-regular';
+    src: url('../../fonts/raleway-regular.eot');
+    src: url('../../fonts/raleway-regular.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/raleway-regular.woff') format('woff'),
+         url('../../fonts/raleway-regular.ttf') format('truetype'),
+         url('../../fonts/raleway-regular.svg#raleway-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway-semibold';
+    src: url('../../fonts/raleway-semibold.eot');
+    src: url('../../fonts/raleway-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/raleway-semibold.woff') format('woff'),
+         url('../../fonts/raleway-semibold.ttf') format('truetype'),
+         url('../../fonts/raleway-semibold.svg#raleway-semibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway-bold';
+    src: url('../../fonts/raleway-bold.eot');
+    src: url('../../fonts/raleway-bold.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/raleway-bold.woff') format('woff'),
+         url('../../fonts/raleway-bold.ttf') format('truetype'),
+         url('../../fonts/raleway-bold.svg#raleway-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
+
+
+/*  General CSS*/
+body,
+html {
+  left: 0;
+  top: 0;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: #2f2f2f;
+  font-size: 16px;
+  line-height: 1.7;
+  background-color: #fff;
+}
+
+.wrapper{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 ,h6{
+    color: #626262;
+    font-family: "raleway-regular", arial;
+    letter-spacing: 1px;
+}
+
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.5em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+h5              { font-size: .83em; margin: 1.5em 0 }
+h6              { font-size: .75em; margin: 1.67em 0 }
+h1, h2, h3, h4,
+h5, h6          { font-weight: bolder }
+
+.clearfix:before,  
+.clearfix:after {  
+    content: " ";  
+    display: table;  
+}  
+.clearfix:after {  
+    clear: both;  
+}  
+ 
+.clearfix {  
+    *zoom: 1;  
+}
+
+
+/*    Billboard    */
+.billboard{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.billboard.dark{
+    background: url('../../images/1579626280_16-p-minimalistichnie-foni-s-rasteniyami-40.jpg') no-repeat;
+    
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+
+.billboard .shadow{
+    position: absolute;
+    width: 100%;
+    height: 142px;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -1px;
+    background: url('../../images/shadow.png') repeat-x;
+}
+
+.billboard .caption{
+    margin-top: 130px;
+    text-align: center;
+}
+
+.billboard .caption.light{
+    color: rgb(255, 255, 255);
+}
+
+
+.billboard .caption h1{
+    font-family: "raleway-bold";
+    font-size: 50px;
+    font-weight: bold; 
+    margin-bottom: 30px;
+}
+
+.billboard .caption.light h1{
+    color: rgb(122, 47, 47);
+}
+
+
+.billboard .caption p{
+    font-family: "raleway-regular";
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.billboard .caption.light p{
+    color: rgb(0, 0, 0);
+}
+
+
+.billboard .caption hr{
+    display: inline-block;
+    height: 1px;
+    width: 30px;
+    border: 0!important;   
+    margin: 0;
+    padding: 0;
+}
+
+.billboard .caption.light hr{
+    background: #fff;
+}
+
+
+
+/*    header    */
+header{
+    width: 100%;
+    height: 125px;
+}
+
+header .logo{
+    float: left;
+    margin-top: 50px;
+}
+
+header nav{
+    float: right;
+    margin-top: 57px;
+}
+
+
+header nav ul li{
+    list-style: none;
+    display: block;
+    float: left;
+    margin-left: 50px;
+}
+
+header nav ul li a{
+    text-decoration: none;  
+    font-family: "raleway-regular";
+    font-size: 14px;
+
+    transition:all .2s linear;
+    -webkit-transition:all .2s linear;
+    -moz-transition:all .2s linear;
+    -o-transition:all .2s linear;
+}
+
+header.light nav ul li a{  
+    color: rgb(24, 0, 0);
+}
+
+header.light nav ul li a:hover{
+    color: #B9B9B9;
+}
+
+
+.projects_table{
+    background-color: #fff;
+    padding: 0px 500px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: 1px solid rgba(0, 0, 0, 0.185);
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="create()"> click</button>
+<input type="url" id="imgURL" />
+
+<iframe id="ifr" width="420" height="345" src="https://www.youtube.com/embed/T7FodPQ1-X0">
+</iframe>
+
+<script type="text/javascript">
+
+function create(){
+  var src = document.getElementById('imgURL').value;
+  var v = document.getElementById("ifr");
+  v.src=src;
+}
+
+</script>
+
+</body>
+</html>

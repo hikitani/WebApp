@@ -1,0 +1,259 @@
+@font-face {
+    font-family: 'raleway-regular';
+    src: url('../../fonts/raleway-regular.eot');
+    src: url('../../fonts/raleway-regular.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/raleway-regular.woff') format('woff'),
+         url('../../fonts/raleway-regular.ttf') format('truetype'),
+         url('../../fonts/raleway-regular.svg#raleway-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'raleway-semibold';
+    src: url('../../fonts/raleway-semibold.eot');
+    src: url('../../fonts/raleway-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/raleway-semibold.woff') format('woff'),
+         url('../../fonts/raleway-semibold.ttf') format('truetype'),
+         url('../../fonts/raleway-semibold.svg#raleway-semibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'raleway-bold';
+    src: url('../../fonts/raleway-bold.eot');
+    src: url('../../fonts/raleway-bold.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/raleway-bold.woff') format('woff'),
+         url('../../fonts/raleway-bold.ttf') format('truetype'),
+         url('../../fonts/raleway-bold.svg#raleway-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+                            
+
+
+
+/*  General CSS*/
+body,
+html {
+  left: 0;
+  top: 0;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+body {
+  color: #2f2f2f;
+  font-size: 16px;
+  line-height: 1.7;
+  background-color: #fff;
+}
+
+
+.wrapper{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 ,h6{
+    color: #626262;
+    font-family: "raleway-regular", arial;
+    letter-spacing: 1px;
+}
+
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.5em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+h5              { font-size: .83em; margin: 1.5em 0 }
+h6              { font-size: .75em; margin: 1.67em 0 }
+h1, h2, h3, h4,
+h5, h6          { font-weight: bolder }
+
+.clearfix:before,  
+.clearfix:after {  
+    content: " ";  
+    display: table;  
+}  
+.clearfix:after {  
+    clear: both;  
+}  
+ 
+.clearfix {  
+    *zoom: 1;  
+}
+
+
+/*    Billboard    */
+.billboard{
+    width: 100%;
+    height: 490px;
+    position: relative;
+}
+
+.billboard.light{
+    background: url('../../images/billboard.jpg') no-repeat;   
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+
+.billboard .shadow{
+    position: absolute;
+    width: 100%;
+    height: 142px;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -1px;
+    background: url('../../images/shadow.png') repeat-x;
+}
+
+.billboard .caption{
+    margin-top: 130px;
+    text-align: center;
+}
+
+.billboard .caption.light{
+    color: #fff;
+}
+
+
+.billboard .caption h1{
+    font-family: "raleway-bold";
+    font-size: 50px;
+    font-weight: bold; 
+    margin-bottom: 30px;
+}
+
+.billboard .caption.light h1{
+    color: #fff;
+}
+
+
+.billboard .caption p{
+    font-family: "raleway-regular";
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.billboard .caption.light p{
+    color: #fff;
+}
+
+
+.billboard .caption hr{
+    display: inline-block;
+    height: 1px;
+    width: 30px;
+    border: 0!important;   
+    margin: 0;
+    padding: 0;
+}
+
+.billboard .caption.light hr{
+    background: #fff;
+}
+
+
+
+
+
+/*    header    */
+header{
+    width: 100%;
+    height: 125px;
+}
+
+header .logo{
+    float: left;
+    margin-top: 50px;
+}
+
+header nav{
+    float: right;
+    margin-top: 57px;
+}
+
+
+header nav ul li{
+    list-style: none;
+    display: block;
+    float: left;
+    margin-left: 50px;
+}
+
+header nav ul li a{
+    text-decoration: none;  
+    font-family: "raleway-regular";
+    font-size: 14px;
+
+    transition:all .2s linear;
+    -webkit-transition:all .2s linear;
+    -moz-transition:all .2s linear;
+    -o-transition:all .2s linear;
+}
+
+header.light nav ul li a{  
+    color: #fff;
+}
+
+header.light nav ul li a:hover{
+    color: #B9B9B9;
+}
+
+button{
+    border-radius: 20px;
+    border: 1px solid rgb(80, 75, 75);
+    background: rgb(181, 172, 238);
+    color: whitesmoke;
+    font-size: 12px;
+	font-weight: bold;
+    padding: 20px 45px;
+    letter-spacing: 1px;
+	transition: transform 80ms ease-in;
+	color: steelblue;
+}
+
+button:active{
+	transform: scale(0.95);
+	text-transform: capitalize;
+	color: seagreen;
+}
+
+button:focus{
+    outline: none;
+}
+
+button.ghost{
+    background:  transparent;
+    border-color: rgb(245, 11, 11);
+}
+
+.role-container{
+    position: center;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.role {
+    background: rgb(97, 78, 221);
+    background: linear-gradient(to right,rgb(97, 78, 221), rgb(70, 46, 223)) no-repeat 0 0 /cover;
+    color: white;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0) 0.6s ease-in-out;
+}
