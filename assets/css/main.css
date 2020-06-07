@@ -61,7 +61,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 ,h6{
-    color: #626262;
+    color: #140312;
     font-family: "raleway-regular", arial;
     letter-spacing: 1px;
 }
@@ -126,9 +126,9 @@ h5, h6          { font-weight: bolder }
 
 
 .billboard .caption h1{
-    font-family: "raleway-bold";
+    font-family: Impact, Charcoal, sans-serif;
     font-size: 50px;
-    font-weight: bold; 
+    font-weight: 400; 
     margin-bottom: 30px;
 }
 
@@ -138,7 +138,7 @@ h5, h6          { font-weight: bolder }
 
 
 .billboard .caption p{
-    font-family: "raleway-regular";
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-bottom: 30px;
 }

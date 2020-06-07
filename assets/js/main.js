@@ -297,31 +297,24 @@ if(flagCloseQ == false){
 };
 
 function clickBtn(){
-	var qForm = document.createElement('h2');
 	var question = document.createElement('textarea');
 	var ans1 = document.createElement('input');
 	var ans2 = document.createElement('input');
 	var ans3 = document.createElement('input');
-	var conf = document.createElement('button');
-
-	conf.style.maxHeight="20px";
-	conf.style.maxWidth="350px";
-	conf.style.fontSize="15px";
-	conf.style.color="white";
-	conf.style.background="gray";
-	conf.style.fontWeight="lighter";
-	conf.style.padding="2px 5px";
 
 	document.body.appendChild(question);
 	document.body.appendChild(ans1);
 	document.body.appendChild(ans2);
 	document.body.appendChild(ans3);
-	conf.appendChild(document.createTextNode('Save'));
-	document.body.appendChild(conf);
 
-	conf.addEventListener('click', appendQuestion);
+	question.addEventListener('dblclick', appendQuestion);
 		
 	function appendQuestion() {
+		var div = document.createElement('div');
+		div.className="projects_table";
+		div.draggable="true";
+		div.style.position="absolute";
+		var qForm = document.createElement('h2');
 		qForm.appendChild(document.createTextNode(question.value));
 		var btn_ans_1 = document.createElement('button');
 		var btn_ans_2 = document.createElement('button');
@@ -333,36 +326,72 @@ function clickBtn(){
 		document.body.removeChild(ans1);
 		document.body.removeChild(ans2);
 		document.body.removeChild(ans3);
-		document.body.removeChild(conf);
-		document.body.appendChild(qForm);
-		document.body.appendChild(btn_ans_1);
-		document.body.appendChild(btn_ans_2);
-		document.body.appendChild(btn_ans_3);
+		div.appendChild(qForm);
+		div.appendChild(btn_ans_1);
+		div.appendChild(btn_ans_2);
+		div.appendChild(btn_ans_3);
+		document.body.appendChild(div);
 
-		qForm.addEventListener('dblclick',changeQuestion);
+		dragElement(div);
 
-		function changeQuestion(){
-			var conf = document.createElement('button');
-			document.body.appendChild(question);
-			conf.appendChild(document.createTextNode('Save'));
-			document.body.appendChild(conf);
-			document.body.removeChild(qForm);
+		qForm.addEventListener('dblclick',deleteQuestion);
 
-			conf.addEventListener('click', appQuestion);
-
-			function appQuestion(){
-				var newq = document.createElement('h2');
-				newq.appendChild(document.createTextNode(question.value));
-				document.body.appendChild(newq);
-				document.body.removeChild(question);
-				document.body.removeChild(conf);
-			}
+		function deleteQuestion(){
+			
+			document.body.removeChild(div);
 		}
 	};
 
 };
 
 //                                            end вопрос с закрытым ответом
+
+
+//                                             вопрос с открытым ответом
+
+var flagCloseQ = false;
+var i = 0;
+
+var txtQuestion = document.getElementById('txtq-link');
+
+if(flagCloseQ == false){
+	txtQuestion.addEventListener('click', clickBtn);
+	flagCloseQ = true;
+};
+
+function clickBtn(){
+	var question = document.createElement('textarea');
+
+	document.body.appendChild(question);
+
+	question.addEventListener('dblclick', appendQuestion);
+		
+	function appendQuestion() {
+		var div = document.createElement('div');
+		div.className="projects_table";
+		div.draggable="true";
+		div.style.position="absolute";
+		var qForm = document.createElement('h2');
+		qForm.appendChild(document.createTextNode(question.value));
+		var ans = document.createElement('input');
+		document.body.removeChild(question);
+		div.appendChild(qForm);
+		div.appendChild(ans);
+		document.body.appendChild(div);
+
+		dragElement(div);
+
+		qForm.addEventListener('dblclick',deleteQuestion);
+
+		function deleteQuestion(){
+			
+			document.body.removeChild(div);
+		}
+	};
+
+};
+
+//                                            end вопрос с открытым
 
 
 //  save btn

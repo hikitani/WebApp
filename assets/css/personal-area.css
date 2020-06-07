@@ -55,6 +55,16 @@ body {
   background-color: #fff;
 }
 
+input{
+    background: rgba(240, 235, 239, 0.637);
+    border: 1px solid rgb(179, 176, 176);
+    padding: 12px 100px;
+    margin: 8px 380px;
+    margin-right: 10px;
+    width: 20%;
+}
+
+
 .wrapper{
     width: 1100px;
     margin: 0 auto;
@@ -126,9 +136,9 @@ h5, h6          { font-weight: bolder }
 
 
 .billboard .caption h1{
-    font-family: "raleway-bold";
+    font-family: Impact, Charcoal, sans-serif;
     font-size: 50px;
-    font-weight: bold; 
+    font-weight: 400; 
     margin-bottom: 30px;
 }
 
@@ -138,7 +148,7 @@ h5, h6          { font-weight: bolder }
 
 
 .billboard .caption p{
-    font-family: "raleway-regular";
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-bottom: 30px;
 }
@@ -214,5 +224,17 @@ header.light nav ul li a:hover{
     margin-right: 20%;
     margin-top: 1%;
     margin-bottom: 1%;
+    border: 1px solid rgba(0, 0, 0, 0.185);
+}
+
+
+#role{
+    background-color: #fff;
+    padding: 0px 100px;
+    height: 45px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Impact, Charcoal, sans-serif;
+    font-weight: 100;
     border: 1px solid rgba(0, 0, 0, 0.185);
 }

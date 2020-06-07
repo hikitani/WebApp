@@ -522,3 +522,40 @@ input, select, textarea {
 		left: 75px;
 		top: 720px;
 	}
+
+	.projects_table{
+    background-color: #fff;
+    padding: 0px 300px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: 1px solid rgba(0, 0, 0, 0.185);
+}
+
+.projects_table button{
+	background-color: #fff;
+	padding: 0px 100px;
+	margin-left: 5%;
+	margin-right: 10%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	border: 1px solid rgba(0, 0, 0, 0.185);
+}
+.projects_table h2{
+	background-color: #fff;
+	padding: 0px 100px;
+	margin-left: 5%;
+	margin-right: 10%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.projects_table input{
+	background: rgba(240, 235, 239, 0.637);
+	border: 1px solid rgb(179, 176, 176);
+	padding: 5px 180px;
+	margin: 8px 50px;
+	margin-right: 10px;
+	width: 20%;
+}

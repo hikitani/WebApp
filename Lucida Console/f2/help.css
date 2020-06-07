@@ -1,0 +1,7 @@
+body{
+  background-image: url('../../images/Безымянный.png');
+}
+
+textarea,h2,text{
+  font-family: 'Lucida Console';
+}
