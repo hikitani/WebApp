@@ -187,7 +187,7 @@ function createImage(e) {
 		/* checking the protocol (calling the previous function),
 			of the URIs provided in the text input elements: */
 		src = protocolCheck(document.getElementById('imgURL').value);
-		href = protocolCheck('');
+		// href = protocolCheck('');
 
 		// creating an 'img' element, and an 'a' element
 		var img = document.createElement('img'),
@@ -200,7 +200,7 @@ function createImage(e) {
 		img.src = src;
 
 		// setting the href attribute to the (hopefully) valid URI from above
-		a.href = href;
+		// a.href = href;
 		// appending the 'img' to the 'a'
 		a.appendChild(img);
 		div.appendChild(a);
