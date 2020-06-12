@@ -1,7 +1,4 @@
 <?php
-    /*
-     * Файл валидации данных формы регистрациии
-     */
     require "../Model/db.php";
 
     function prepareField($value)

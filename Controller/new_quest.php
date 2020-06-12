@@ -1,8 +1,4 @@
 <?php
-    /*
-     * Файл авторизации
-     */
-
     require "../Model/db.php";
 
     function prepareField($value)
