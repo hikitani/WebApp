@@ -23,7 +23,10 @@
             text-align: left;
             float: left;
             margin-left: 10%;
-        }
+		}
+		table {
+			margin-left: 40%;
+		}
     </style>
 </head>
 <body>
@@ -40,15 +43,24 @@
 			</nav>
 		</header>
 
-		<div class="left caption light animated wow fadeInDown clearfix">
+		<div class="wrapper caption light animated wow fadeInDown clearfix">
+			<h2><?php echo $my_quest->name ?></h2>
+			<p><?php echo $my_quest->description ?></p>
+		</div>
+		
+		<div class="wrapper caption light animated wow fadeInDown clearfix">
             <?php if (count($roles) != 0): ?>
 				<h2>Роли</h2>
 				<ul>
 					<?php foreach($roles as $role): ?>
                         <li>
-                            <p><?php echo $role->name ?></p>
-                            <a href="/view_role.php?id_role=<?php echo $role->id ?>&"><p>Посмотреть</p></a>
-                            <a href="/edit_role.php?id_role=<?php echo $role->id ?>&"><p>Настроить</p></a>
+							<table border="0">
+								<tr>
+									<td width="10%"><p><?php echo $role->name ?></p></td>
+									<td width="auto"><a href="/view_role.php?id_role=<?php echo $role->id ?>&"><p>Посмотреть</p></a></td>
+									<td width="auto"><a href="/edit_role.php?id_role=<?php echo $role->id ?>&"><p>Настроить</p></a></td>
+								</tr>
+							</table>
                         </li>
 					<?php endforeach; ?>
                 </ul>
