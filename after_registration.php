@@ -45,7 +45,7 @@
 				<h1>Мои квесты</h1>
 				<ul>
 					<?php foreach($my_quests as $quest): ?>
-						<li><a href="/quest_info.php?id_quest=<?php echo $quest->id ?>&"><p><?php echo $quest->name ?></p></a></li>
+						<li><a href="/quest_info.php?id_quest=<?php echo $quest->id ?>"><p><?php echo $quest->name ?></p></a></li>
 					<?php endforeach; ?>
 				</ul>
 			<?php endif; ?>
@@ -93,7 +93,6 @@
 			<hr class="separator"/>
 		</div>
 
-</body>
-/
+</body>	
 <script src="/assets/js/registration.js"></script>
 </html>
