@@ -4,10 +4,11 @@
 		<title>Background</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="../assets/css/start-page.css">
-		<link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 		<link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/animate.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 		<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/start-page.css"> 
 		<style>
 			.main {
 				padding-bottom: 0px;
@@ -25,9 +26,26 @@
 			.container {
 				margin-top: 3%;
 			}
+			.billboard {
+				height: auto;
+			}
+			header nav {
+				margin-top: 57px;
+				margin-right: 50px;
+			}
 		</style>	
 	</head>
 	<body>
+		<section class="billboard">
+			<header class="wrapper light">
+				<nav>
+					<ul>
+						<li><a href="/index.php">Главная</a></li>
+						<li id="log_out"><a href="/Controller/logout.php">Выйти</a></li>
+					</ul>
+				</nav>
+			</header>
+		</section>
     
     <!--project start-->    
     <form id="project" action="/Controller/create_role.php?id_quest=<?php echo $_GET['id_quest'] ?>" method="POST"> 

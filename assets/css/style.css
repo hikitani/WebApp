@@ -50,12 +50,12 @@ html {
 
   body {
 	background: linear-gradient(to right,rgb(255, 238, 211), rgb(211, 165, 207)) no-repeat 0 0 /cover;
-	display: flex;
+	display: block;
 	flex-direction: column;
 	justify-content: center;
 	/* align-items: center; */
-	height: 96.5vh;
-	margin: -20px 0 50px;
+	/* height: 96.5vh; */
+	/* margin: -20px 0 50px; */
 	font-family: 'lyphicons-halflings-regular';
   }
   
