@@ -3,12 +3,14 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
+var userRoot = document.getElementById('place');
 (function($) {
 
 	var	$window = $(window),
 		$body = $('body'),
 		$nav = $('#nav');
+
+	
 
 	// Breakpoints.
 		breakpoints({
@@ -153,6 +155,10 @@
 
 });
 
+imgs = document.getElementsByClassName('custom-img')
+for(var i=0; i<imgs.length; i++) {
+    dragElement(imgs[i])
+}
 
 //                                                        create image
 var imgBtn = document.getElementById('image-link');
@@ -193,6 +199,8 @@ function createImage(e) {
 		var img = document.createElement('img'),
 				a = document.createElement('a'),
 				div = document.createElement('div');
+		
+		img.class = "custom-img"
 
 		div.style.position="absolute";
 
@@ -208,7 +216,7 @@ function createImage(e) {
 		imgform.style.display="none";
 
 		// inserting the 'a' element *after* the 'form' element
-		parent.parentNode.insertBefore(div, parent.nextSibling);
+		userRoot.appendChild(div);
 }
 
 var addButton = document.getElementById('imgAdd');
@@ -233,6 +241,10 @@ function create_video(){
 	b.style.display="none";
 }
 
+var labels = document.getElementsByClassName('custom-label');
+for(var i=0; i<labels.length; i++) {
+    dragElement(labels[i])
+}
 
 //                                        create/delete/rename text lable
 var flagTxtLable = false;
@@ -245,11 +257,12 @@ if(flagTxtLable == false){
 
 function clickQBtn(){
 	var d = document.createElement('div');
+	d.class = "custom-label"
 	d.style.position="absolute";
 	d.draggable="true";
 	var btn=document.createElement('h2');
 	var textInBtn = document.createTextNode('Нажмите для изменения текста');
-	document.body.appendChild(d);
+	userRoot.appendChild(d);
 	btn.appendChild(textInBtn);
 	d.appendChild(btn);
 	dragElement(d);
@@ -277,7 +290,7 @@ function clickQBtn(){
 
 	function removeBtn(){
 		flagTxtLable = false;
-		document.body.removeChild(d);
+		userRoot.removeChild(d);
 	};
 };
 //                                             end text lable
@@ -330,7 +343,7 @@ function clickBtn(){
 		div.appendChild(btn_ans_1);
 		div.appendChild(btn_ans_2);
 		div.appendChild(btn_ans_3);
-		document.body.appendChild(div);
+		userRoot.appendChild(div);
 
 		dragElement(div);
 
@@ -338,7 +351,7 @@ function clickBtn(){
 
 		function deleteQuestion(){
 			
-			document.body.removeChild(div);
+			userRoot.removeChild(div);
 		}
 	};
 
@@ -377,7 +390,7 @@ function clickBtn(){
 		document.body.removeChild(question);
 		div.appendChild(qForm);
 		div.appendChild(ans);
-		document.body.appendChild(div);
+		userRoot.appendChild(div);
 
 		dragElement(div);
 
@@ -385,7 +398,7 @@ function clickBtn(){
 
 		function deleteQuestion(){
 			
-			document.body.removeChild(div);
+			userRoot.removeChild(div);
 		}
 	};
 
@@ -399,11 +412,18 @@ var saveBtn = document.getElementById('saveBtn');
 saveBtn.addEventListener('click', clickSave);
 
 function clickSave(){
-	var header = document.getElementById('header');
-	var mainbox = document.getElementById('mainbox');
-	saveBtn.removeEventListener('click', clickSave);
-	document.body.removeChild(header);
-	document.body.removeChild(mainbox);
+	$.post(
+		"Controller/role_save_page.php",
+		{
+			'id_role': id_role,
+			'id_quest': id_quest,
+			'page': userRoot.innerHTML
+		}
+	).done(
+		(data) => {
+			alert("Сохранено");
+		}
+	);
 };
 
 
