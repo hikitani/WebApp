@@ -18,7 +18,13 @@
 		<link rel="stylesheet" href="../assets/jquery-ui-1.12.1.custom/jquery-ui.css" />
         <link rel="stylesheet" href="../assets/jquery-ui-1.12.1.custom/jquery-ui.structure.css" />
 				<link rel="stylesheet" href="../assets/jquery-ui-1.12.1.custom/jquery-ui.theme.css" />
-				<link rel="stylesheet" href="../assets/css/help.css" />
+                <link rel="stylesheet" href="../assets/css/help.css" />
+                
+        <style>
+            body {
+                background-image: url(images/<?php echo $role->bg ?>);
+            }
+        </style>
 	</head>
 	<body class="is-preload">
 	<div id="mainbox" onclick="openFunction()" >&#9776; Menu</div>
@@ -64,6 +70,7 @@
             </div>
 
             <script type="text/javascript">
+                closeFunction();
 				function openFunction(){
 					document.getElementById("header").style.width="375px";
 				}
