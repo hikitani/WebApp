@@ -1,3 +1,12 @@
+<?php require 'Model/db.php' ?> 
+
+<?php
+	if (empty($_SESSION['logged_user'])) {
+		header('Location: /index.php');
+	}
+	$my_quests = R::find('quests', 'id_user = ?', [$_SESSION['logged_user']->id])
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +16,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+  	<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 
 </head>
 <body>
@@ -16,24 +25,37 @@
 		<header class="wrapper light">
 			<nav>
 				<ul>
-					<li><a href="#">About project</a></li>
-					<li><a href="/view/start.html">Start creating</a></li>
-					<li id="log_out"><a href="/Controller/logout.php">Log Out</a></li>
+					<li><a>Привет, 
+						<?php 
+							// session_start();
+							echo $_SESSION['logged_user']->login;
+						?>
+					</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="/view/start.html">Создать квест</a></li>
+					<li id="log_out"><a href="/Controller/logout.php">Выйти</a></li>
 					<li><a href="#"><span class="icon solid fa-user"></span></a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<div class="caption light animated wow fadeInDown clearfix">
-			<h1>About us</h1>
-			<p>Rain be pouting, sky keep falling everyday. Fight me and I'm gone live with you</p>
+			<!-- <hr> -->
+			<?php if (count($my_quests) != 0): ?>
+				<h1>Мои квесты</h1>
+				<ul>
+					<?php foreach($my_quests as $quest): ?>
+						<li><a href="/quest_info.php?id_quest=<?php echo $quest->id ?>&"><p><?php echo $quest->name ?></p></a></li>
+					<?php endforeach; ?>
+				</ul>
+			<?php endif; ?>
 			<hr>
 		</div>
-		<div class="shadow"></div>
+		<!-- <div class="shadow"></div> -->
 	</section><!--  End billboard  -->
 
 	<div class="personal_area">
-
+		
 	</div>
 
 	

@@ -4,7 +4,7 @@
 	// Шапка сайта
 	if (empty($_SESSION['logged_user'])) {
 		include("View/index.html");
-	} else {
-		include("View/after_registration.html");
+	} else {		
+		header('Location: /after_registration.php');
 	}
 ?>
